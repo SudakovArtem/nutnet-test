@@ -14,19 +14,102 @@ block variables
 
 block main
   main
-    .container
-      p(style="margin-top: 40px;") Пример вызова модалок
-      p
-        a(href="#", data-modal="feedback") modal--feedback link
-      p
-        a(href="#", data-modal="success") modal--success link
+    section.intro
+      .intro__bg.background
+        +img("content", "intro-background", "jpg", 1600, 670, "background")
+      .container-lg
+        h2.intro__title We Are Awesome Creative Agency
+        p.intro__text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh
+        button.intro__btn.btn learn more
+    section.our-story
+      .our-story__wrap.container-lg
+        h2.our-story__title our story
+        p.our-story__text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus
+        p.our-story__text Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        button.our-story__btn.btn learn more
+      .our-story__video
+        .our-story__bg.background
+          +img("content", "our-story-background", "jpg", 1600, 549, "background")
+        .container-lg
+          button.our-story__play-btn watch our story
+    section.expertise.container-lg
+      h2.expertise__title expertise
+      p.expertise__text Lorem ipsum dolor sit amet proin gravida nibh vel velit
+      ul.expertise__list
+        li.expertise__item.expertise-item
+          .expertise-item__icon
+          h3.expertise-item__name
+          p.expertise-item__description
+    section.team
+      .team__bg.background
+        +img("content", "team-background", "jpg", 1600, 712, "background")
+      .team__container.container-lg
+        h2.team__title MEET OUR AMAZING TEAM
+        p.team__text Lorem ipsum dolor sit amet proin gravida nibh vel velit
+        ul.team__list
+          li.team__item.team-item
+            .team-item__icon
+            h3.team-item__name
+            p.team-item__position
+        .team__footer
+          p.team__footer-text Become part of our dream team, let’s join us !
+          button.team__btn.btn WE ARE HIRING
+    section.our-works
+      .our-works__wrap.container-lg
+        h2.our-works__title
+        a(href="#").our-works__link
+      ul.our-works__list.row
+        each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+          li.our-works__item.col-2
+      .our-works__footer
+        button.our-works__btn.btn learn more
+    section.review
+      .review__bg.background
+        +img("content", "review-background", "jpg", 1600, 499, "background")
+      .review__container.container-lg
+        h2.review__title GIVE US A GOOD NEWS
+        .review__form
+          form(action="#")
+            .input-wrapper.js-form-item
+              label
+                input(name="user-name" data-type="text" aria-required="true" aria-invalid="false")
+                span.input-wrapper__label.js-form-label placeholder-1
+                span.input-wrapper__error.js-form-error Неправильно указано имя
+            .input-wrapper.js-form-item
+              label
+                input(type="email" name="user-email" data-type="email" aria-required="true" aria-invalid="false")
+                span.input-wrapper__label.js-form-label placeholder-1
+                span.input-wrapper__error.js-form-error Неправильно указано имя
+            .input-wrapper.js-form-item
+              label
+                input(type="tel" name="user-tel" inputmode="tel" data-type="tel" aria-required="true" aria-invalid="false")
+                span.input-wrapper__label.js-form-label placeholder-1
+                span.input-wrapper__error.js-form-error Неправильно указано имя
+            .textarea-wrapper.js-form-item.js-textarea
+              label
+                textarea(data-type="textarea" aria-required="true" aria-invalid="false" rows="1")
+                span.textarea-wrapper__label.js-form-label @@placeholder-4
+                span.textarea-wrapper__error.js-form-error Введите сообщение
 
-      p(style="margin-top: 40px;") Пример импорта из `pug/data`
-      h3= heading.title
-      i= heading.description
 
-      p(style="margin-top: 40px;") Пример использования +img()
-      +img("content", "placeholder", "jpg", 250, 250, "Пример")
+
+
+
+
+
+
+
+
+
+
+
+
+  p(style="margin-top: 40px;") Пример импорта из `pug/data`
+        h3= heading.title
+        i= heading.description
+
+        p(style="margin-top: 40px;") Пример использования +img()
+        +img("content", "placeholder", "jpg", 250, 250, "Пример")
 
 block modals
   +modal("modal--feedback")

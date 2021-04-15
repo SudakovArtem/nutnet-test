@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Компоненты</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Project Name - описание">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol></svg></div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrapper container-lg"><a class="header__logo" href="main.html" aria-label="Переход на главную">Логотип</a>
+          <nav class="main-nav">
+            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="#icon-burger"></use>
+              </svg>
+            </button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list">
+                <li><a class="main-nav__link" href="#">HOME</a></li>
+                <li><a class="main-nav__link" href="#">ABOUT</a></li>
+                <li><a class="main-nav__link" href="#">EXPERTISE</a></li>
+                <li><a class="main-nav__link" href="#">TEAMS</a></li>
+                <li><a class="main-nav__link" href="#">WORKS</a></li>
+                <li><a class="main-nav__link" href="#">PEOPLE SAY</a></li>
+                <li><a class="main-nav__link" href="#">CONTACT</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <style>
+        main > .container {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+        
+        .components-backwards {
+          display: inline-block;
+          margin-bottom: 10px;
+          margin-left: 7px;
+        }
+        
+        .components-backwards span:first-child {
+          position: relative;
+          top: -3px;
+        
+          display: inline-block;
+          margin-right: 15px;
+        
+          font-size: 16px;
+          line-height: 24px;
+          vertical-align: top;
+        
+          transform: scale(2);
+        }
+        
+        .components-backwards span:last-child {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        
+        .components-backwards + h1 {
+          margin-bottom: 0;
+        }
+        
+        .container > section {
+          padding: 20px 0;
+        }
+        
+      </style>
+      <main>
+        <div class="container"><a class="components-backwards" href="index.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
+          <h1>Компоненты, используемые в вёрстке</h1>
+          <section>
+            <h2>Название компонента или группы компонентов</h2>
+            <p>Класс компонента \ модификаторы</p>
+            <p style="color: red;">При необходимости, подсказки \ предупреждение \ важная информация</p>
+            <div>Компонент</div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__bg background"><img src="img/content/footer-background.jpg" srcset="img/content/footer-background@2x.jpg 2x" width="1600" height="400" alt="background"/>
+        </div>
+        <div class="footer__container container-lg">
+          <div class="footer__top row">
+            <div class="footer__col col">
+              <div class="footer__logo"></div>
+              <div class="footer__text">lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</div>
+            </div>
+            <div class="footer__col col">
+              <div class="footer__title">OUR STUDIO</div>
+              <ul class="footer__contacts-list">
+                <li class="footer__contacts-item footer__contacts-item--address">Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia</li>
+                <li class="footer__contacts-item footer__contacts-item--tel">(+62) 21-2224 3333</li>
+              </ul>
+            </div>
+            <div class="footer__col col">
+              <div class="footer__title">STAY IN TOUCH</div>
+              <div class="footer__subscription subscription-block">
+                <form action="#" method="post" novalidate="">
+                  <div class="input-wrapper js-form-item">
+                    <label>
+                      <input type="tel" name="user-tel" inputmode="tel" data-type="tel" aria-required="true" aria-invalid="false"/><span class="input-wrapper__label js-form-label">placeholder-1</span><span class="input-wrapper__error js-form-error">Неправильно указано имя</span>
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <ul class="footer__socials">
+                <li class="socials__item"><a class="socials__link" href="#" target="_blank" rel="nofollow noopener"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom row">
+            <ul class="footer__nav col">
+              <li class="footer__nav-item">help</li>
+            </ul>
+            <p class="footer__copyright col">Copyright © 2015 - Tajem Creative</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

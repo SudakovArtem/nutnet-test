@@ -1,2 +1,31 @@
 mixin footer(footerMod)
   footer(class= (footerMod) ? "footer footer--" + footerMod : "footer")
+    .footer__bg.background
+      +img("content", "footer-background", "jpg", 1600, 400, "background")
+    .footer__container.container-lg
+      .footer__top.row
+        .footer__col.col
+          .footer__logo
+          .footer__text lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit
+        .footer__col.col
+          .footer__title OUR STUDIO
+          ul.footer__contacts-list
+            li.footer__contacts-item.footer__contacts-item--address Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia
+            li.footer__contacts-item.footer__contacts-item--tel (+62) 21-2224 3333
+        .footer__col.col
+          .footer__title STAY IN TOUCH
+          .footer__subscription.subscription-block
+            form(action="#" method="post" novalidate="")
+              .input-wrapper.js-form-item
+                label
+                  input(type="tel" name="user-tel" inputmode="tel" data-type="tel" aria-required="true" aria-invalid="false")
+                  span.input-wrapper__label.js-form-label placeholder-1
+                  span.input-wrapper__error.js-form-error Неправильно указано имя
+          ul.footer__socials
+            li.socials__item
+              a(href="#" target="_blank" rel="nofollow noopener").socials__link
+      .footer__bottom.row
+        ul.footer__nav.col
+          li.footer__nav-item help
+        p.footer__copyright.col Copyright © 2015 - Tajem Creative
+

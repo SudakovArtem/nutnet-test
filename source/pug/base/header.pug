@@ -3,20 +3,36 @@ mixin header(headerMod, currentPage)
     var headerLinks = [
       {
         href: "#",
-        text: "Страница 1"
+        text: "HOME"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "ABOUT"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "EXPERTISE"
+      },
+      {
+        href: "#",
+        text: "TEAMS"
+      },
+      {
+        href: "#",
+        text: "WORKS"
+      },
+      {
+        href: "#",
+        text: "PEOPLE SAY"
+      },
+      {
+        href: "#",
+        text: "CONTACT"
       },
     ]
 
   header(class=(headerMod) ? "header header--" + headerMod : "header")
-    .header__wrapper
+    .header__wrapper.container-lg
       if(currentPage === "main")
         a.header__logo Логотип
       else
