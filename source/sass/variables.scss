@@ -13,6 +13,16 @@ $color-transparent:               rgba(255, 255, 255, 0);
 $color-black:                     #0e0e0e;
 $color-white:                     #f2f2f2;
 $color-blue:                      #2c39f2;
+$color-bright-turquoise:          #00e0d0;
+$color-grape:                     #413d4b;
+$color-night-rider:               #333333;
+$color-snow:                      #f9f9f9;
+$color-snow2:                     #fafafa;
+$color-white-smoke:               #f3f3f3;
+$color-pink-swan:                 #b6b6b6;
+$color-dark-gray:                 #acacac;
+$color-nobel:                     #a1a1a1;
+$color-suva-grey:                 #8a8a8a;
 
 // Gradient
 
@@ -21,7 +31,9 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 // Typography
 //---------------------------------
 
-$font-family--:                     "", "Arial", sans-serif;
+$font-family--primary:             "Roboto", "Arial", sans-serif;
+$font-family--secondary:           "Playfair Display", "Arial", serif;
+$font-family--btn:                 "Hammersmith One", "Arial", sans-serif;
 
 // Animation
 //---------------------------------

@@ -14,6 +14,7 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/typography";
 
 // Blocks
 //---------------------------------
@@ -22,6 +23,16 @@
 @import "blocks/footer";
 @import "blocks/modal";
 @import "blocks/background";
+@import "blocks/intro";
+@import "blocks/our-story";
+@import "blocks/expertise";
+@import "blocks/team";
+@import "blocks/our-works";
+@import "blocks/review";
+@import "blocks/btn";
+@import "blocks/bottom-line";
+@import "blocks/expertise-item";
+@import "blocks/person";
 
 
 // используйте это для отключения ховеров на тач устройствах

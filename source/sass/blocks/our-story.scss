@@ -1,0 +1,30 @@
+.our-story__wrap {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.our-story__title {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.our-story__video {
+  position: relative;
+  min-height: 549px;
+  display: flex;
+  flex-direction: column;
+}
+
+.our-story__video-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.our-story__text {
+  font-size: 14px;
+  color: $color-grape;
+  line-height: 1.571;
+  margin: 0 0 28px;
+}

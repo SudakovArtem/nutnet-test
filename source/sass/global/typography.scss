@@ -1,0 +1,21 @@
+.h1 {
+  font-family: $font-family--secondary;
+  font-size: 32px;
+  line-height: 1.2;
+  color: $color-default-white;
+  text-align: center;
+}
+
+.h2 {
+  text-transform: uppercase;
+  font-family: $font-family--secondary;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: $color-grape;
+  text-align: center;
+
+  &--white {
+    color: $color-default-white;
+  }
+}

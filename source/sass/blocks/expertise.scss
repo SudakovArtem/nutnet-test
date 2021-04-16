@@ -1,0 +1,25 @@
+.expertise {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.expertise__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.expertise__text {
+  font-size: 14px;
+  font-family: $font-family--secondary;
+  color: $color-grape;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.expertise__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}

@@ -11,63 +11,118 @@ block variables
   - var hasFooter = true
   - var footerMod = ""
   - var currentPage = "main" //- для остальных страниц пишем либо пустую строку, либо индекс
+  -
+    var expertiseItems = [
+      {
+        icon: "",
+        title: "WEB DESIGN & DEVELOPMENT",
+        description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+      },
+      {
+        icon: "",
+        title: "BRANDING IDENTITY",
+        description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+      },
+      {
+        icon: "",
+        title: "MOBILE APP",
+        description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+      },
+      {
+        icon: "",
+        title: "SEARCH ENGINE OPTIMIZATION",
+        description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+      },
+      {
+        icon: "",
+        title: "GAME DEVELOPMENT",
+        description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+      },
+      {
+        icon: "",
+        title: "MADE WITH LOVE",
+        description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+      },
+    ]
+
+    var persons = [
+      {
+        photo: "",
+        name: "SEMF UCUK",
+        position: "CEO & FOUNDER"
+      },
+      {
+        photo: "",
+        name: "DIK ADALIN",
+        position: "ENGINEERING "
+      },
+      {
+        photo: "",
+        name: "JENG KOL",
+        position: "DESIGNER"
+      },
+      {
+        photo: "",
+        name: "PET ROMAK",
+        position: "MARKETING"
+      },
+    ]
 
 block main
   main
     section.intro
-      .intro__bg.background
-        +img("content", "intro-background", "jpg", 1600, 670, "background")
-      .container-lg
-        h2.intro__title We Are Awesome Creative Agency
-        p.intro__text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh
+      +img("content", "intro-background", "jpg", 1600, 670, "background").background
+      .intro__container.container-lg
+        h2.h1.intro__title We Are Awesome Creative Agency
+        p.intro__text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
         button.intro__btn.btn learn more
     section.our-story
       .our-story__wrap.container-lg
-        h2.our-story__title our story
+        h2.h2.our-story__title our story
         p.our-story__text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus
         p.our-story__text Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
         button.our-story__btn.btn learn more
       .our-story__video
-        .our-story__bg.background
-          +img("content", "our-story-background", "jpg", 1600, 549, "background")
-        .container-lg
+        +img("content", "our-story-background", "jpg", 1600, 549, "background").background
+        .our-story__video-wrap.container-lg
           button.our-story__play-btn watch our story
     section.expertise.container-lg
-      h2.expertise__title expertise
-      p.expertise__text Lorem ipsum dolor sit amet proin gravida nibh vel velit
-      ul.expertise__list
-        li.expertise__item.expertise-item
-          .expertise-item__icon
-          h3.expertise-item__name
-          p.expertise-item__description
+      h2.h2.expertise__title expertise
+      p.expertise__text.bottom-line Lorem ipsum dolor sit amet proin gravida nibh vel velit
+      ul.expertise__list.row
+        each item in expertiseItems
+          li.expertise__item.expertise-item.col-4
+            .expertise-item__icon
+            h3.expertise-item__name= item.title
+            p.expertise-item__description= item.description
     section.team
-      .team__bg.background
-        +img("content", "team-background", "jpg", 1600, 712, "background")
+      +img("content", "team-background", "jpg", 1600, 712, "background").background
       .team__container.container-lg
-        h2.team__title MEET OUR AMAZING TEAM
-        p.team__text Lorem ipsum dolor sit amet proin gravida nibh vel velit
-        ul.team__list
-          li.team__item.team-item
-            .team-item__icon
-            h3.team-item__name
-            p.team-item__position
+        h2.h2.h2--white.team__title MEET OUR AMAZING TEAM
+        p.team__text.bottom-line Lorem ipsum dolor sit amet proin gravida nibh vel velit
+        ul.team__list.row
+          each person in persons
+            li.team__item.person.col
+              .person__icon
+              .person__wrap
+                h3.person__name= person.name
+                p.person__position= person.position
         .team__footer
           p.team__footer-text Become part of our dream team, let’s join us !
           button.team__btn.btn WE ARE HIRING
     section.our-works
       .our-works__wrap.container-lg
-        h2.our-works__title
-        a(href="#").our-works__link
+        h2.h2.our-works__title OUR WORKS
+        a(href="#").our-works__link See All Project in dribbble
       ul.our-works__list.row
-        each i in [1,2,3,4,5,6,7,8,9,10,11,12]
-          li.our-works__item.col-2
+        each i in [1,2,3,4,1,3,3,1,4,3,2,1]
+          li(class="col-2 our-works__item our-works__item--" + i)
       .our-works__footer
         button.our-works__btn.btn learn more
     section.review
-      .review__bg.background
-        +img("content", "review-background", "jpg", 1600, 499, "background")
+      +img("content", "review-background", "jpg", 1600, 499, "background").background
       .review__container.container-lg
-        h2.review__title GIVE US A GOOD NEWS
+        h2.h2.review__title GIVE US A GOOD NEWS
         .review__form
           form(action="#")
             .input-wrapper.js-form-item

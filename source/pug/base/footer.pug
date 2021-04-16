@@ -1,7 +1,6 @@
 mixin footer(footerMod)
   footer(class= (footerMod) ? "footer footer--" + footerMod : "footer")
-    .footer__bg.background
-      +img("content", "footer-background", "jpg", 1600, 400, "background")
+    +img("content", "footer-background", "jpg", 1600, 400, "background").background
     .footer__container.container-lg
       .footer__top.row
         .footer__col.col

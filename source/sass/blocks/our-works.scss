@@ -1,0 +1,44 @@
+.our-works {
+  position: relative;
+  padding-bottom: 70px;
+}
+
+.our-works__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.our-works__list {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 70px;
+}
+
+.our-works__item {
+  height: 200px;
+
+  &--1 {
+    background-color: $color-pink-swan;
+  }
+
+  &--2 {
+    background-color: $color-dark-gray;
+  }
+
+  &--3 {
+    background-color: $color-nobel;
+  }
+
+  &--4 {
+    background-color: $color-suva-grey;
+  }
+}
+
+.our-works__footer {
+  display: flex;
+  justify-content: center;
+}

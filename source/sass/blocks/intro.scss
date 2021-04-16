@@ -1,0 +1,27 @@
+.intro {
+  position: relative;
+  min-height: 670px;
+}
+
+.intro__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 220px;
+  padding-bottom: 204px;
+}
+
+.intro__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.intro__text {
+  max-width: 780px;
+  font-size: 14px;
+  color: $color-default-white;
+  line-height: 1.714;
+  text-align: center;
+  margin: 0 0 45px;
+}
+
