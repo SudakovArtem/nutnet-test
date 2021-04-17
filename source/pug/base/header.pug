@@ -3,7 +3,8 @@ mixin header(headerMod, currentPage)
     var headerLinks = [
       {
         href: "#",
-        text: "HOME"
+        text: "HOME",
+        mod: "active"
       },
       {
         href: "#",
@@ -31,21 +32,19 @@ mixin header(headerMod, currentPage)
       },
     ]
 
-  header(class=(headerMod) ? "header header--" + headerMod : "header")
-    .header__wrapper.container-lg
+  header(class=(headerMod) ? "header header--" + headerMod : "header").container
+    .header__wrapper.row-md.justify-content-between
       if(currentPage === "main")
-        a.header__logo Логотип
+        a.header__logo.col-md-2
       else
-        a.header__logo(href="main.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
+        a.header__logo.col-md-2(href="main.html", aria-label="Переход на главную")
+      nav.main-nav.col-md-7
         .main-nav__wrapper
           ul.main-nav__list
-            each link, index in headerLinks
-              if(index === currentPage)
-                li
-                  a.main-nav__link.main-nav__link--active=link.text
-              else
-                li
-                  a.main-nav__link(href=link.href)=link.text
+            each link in headerLinks
+              li.main-nav__item
+                a.main-nav__link(href=link.href class="main-nav__link--" + link.mod)=link.text
+        button.main-nav__toggle.btn-reset.burger(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+          span
+          span
+          span

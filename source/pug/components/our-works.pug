@@ -1,0 +1,11 @@
+section.our-works
+  .our-works__wrap.container
+    h2.h2.our-works__title OUR WORKS
+    a(href="#").our-works__link
+      | See All Project in dribbble
+      span
+  ul.our-works__list.row
+    each i in [1,2,3,4,1,3,3,1,4,3,2,1]
+      li(class="col-6 col-md-2 our-works__item our-works__item--" + i)
+  .our-works__footer.container
+    +btn({type: "button", cssClass: "our-works__btn", content: "load more", btnType: "button"})

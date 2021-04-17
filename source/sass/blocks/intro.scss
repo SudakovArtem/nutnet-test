@@ -1,6 +1,10 @@
 .intro {
   position: relative;
   min-height: 670px;
+
+  @include viewport--sm {
+    min-height: auto;
+  }
 }
 
 .intro__container {
@@ -9,19 +13,27 @@
   align-items: center;
   padding-top: 220px;
   padding-bottom: 204px;
+
+  @include viewport--sm {
+    padding-top: 126px;
+    padding-bottom: 64px;
+  }
 }
 
 .intro__title {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
+  letter-spacing: 0.018em;
 }
 
 .intro__text {
-  max-width: 780px;
+  max-width: 783px;
   font-size: 14px;
+  font-weight: 300;
   color: $color-default-white;
   line-height: 1.714;
   text-align: center;
-  margin: 0 0 45px;
+  margin: 0 0 47px;
+  letter-spacing: 0.051em;
 }
 

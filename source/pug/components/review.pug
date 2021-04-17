@@ -1,0 +1,12 @@
+section.review
+  +img("content", "review-background", "jpg", 1600, 499, "background").background
+  .review__container.container
+    .review__block.row.justify-content-center
+      h2.review__title.visually-hidden reviews
+      p.review__text.col-md-10 This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+      b.review__name JANE GALADRIEL
+      span.review__position CEO TENGKUREP
+    ul.review__list
+      each author in authors
+        li(class= author.mod ? `review__item review__item--${author.mod}` : 'review__item' data-text=author.text data-name=author.name data-position=author.position)
+          +img("content", author.photo, "jpg", 45, 45, "author")

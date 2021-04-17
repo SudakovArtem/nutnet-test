@@ -1,0 +1,117 @@
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 21px;
+
+  label {
+    cursor: pointer;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.051em;
+    color: $color-grape;
+    background-color: $color-transparent;
+    border: 2px solid rgba($color-default-black, 0.1);
+    outline: none;
+    padding: 13px 20px 12px 18px;
+    transition: border $default-transition-settings, border-radius $default-transition-settings;
+
+    @media (hover: hover), screen and (min-width: 0) {
+      &:hover,
+      &:focus {
+        border-color: $color-default-black;
+      }
+    }
+  }
+
+  textarea {
+    min-height: 200px;
+    padding-top: 18px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba($color-default-black, 0.6);
+  }
+
+  svg {
+    transition: fill $default-transition-settings;
+  }
+
+  @include viewport--sm {
+    input {
+      padding: 17px 15px 15px 15px;
+    }
+  }
+
+  .input-wrapper__error-text {
+    display: none;
+    position: absolute;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    color: $color-coral-red;
+    margin-top: 5px;
+
+    @include viewport--sm {
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 2px;
+    }
+  }
+
+  &--textarea {
+    margin-bottom: 15px;
+
+    .input-wrapper__error-text {
+      @include viewport--sm {
+        margin-top: -5px;
+      }
+    }
+  }
+
+  &--invalid {
+    input,
+    textarea {
+      border-color: $color-coral-red !important;
+    }
+
+    .input-wrapper__error-text {
+      display: block;
+    }
+  }
+
+  &--valid {
+    input,
+    textarea {
+      border-color: $color-apple !important;
+    }
+  }
+
+  &--subscribe {
+    margin-bottom: 28px;
+
+    input {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border: 2px solid rgba($color-default-white, 0.5);
+
+      @media (hover: hover), screen and (min-width: 0) {
+        &:hover,
+        &:focus {
+          border-color: $color-default-white;
+        }
+      }
+
+      &::placeholder {
+        color: rgba($color-default-white, 0.5);
+      }
+    }
+  }
+}

@@ -1,36 +1,63 @@
 .header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   display: flex;
   align-items: center;
-  min-height: 100px;
-  padding: 0 40px;
+  min-height: 80px;
+  padding-left: 11px;
+  padding-right: 0;
+  background-color: $color-transparent;
+  z-index: 2;
 
-  background-color: $color-blue;
+  @include viewport--md {
+    padding-right: 22px;
+  }
+}
 
-  &__wrapper {
-    display: flex;
-    align-items: center;
+.header__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+  width: 128px;
+  height: 50px;
+  background: url("../img/bg/icons-sprite.png") -10px -10px;
+}
+
+.header--opened {
+  transform: none;
+
+  .main-nav__wrapper {
+    transform: translateX(0) translateZ(0);
+    overflow-y: auto;
+    bottom: 0;
+    visibility: visible;
   }
 
-  a,
-  p {
-    color: $color-white;
-  }
-
-  ul {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
-
-    list-style: none;
-
-    li {
-      margin-right: 20px;
+  .burger {
+    span:nth-of-type(1) {
+      transform-origin: bottom;
+      transform: rotateZ(45deg) translate(3px, 0);
     }
-  }
 
-  .main-nav__toggle {
-    display: none;
+    span:nth-of-type(2) {
+      transform-origin: top;
+      transform: rotateZ(-45deg);
+    }
+
+    span:nth-of-type(3) {
+      transform-origin: bottom;
+      width: 50%;
+      transform: translate(13px, -5px) rotateZ(45deg);
+    }
+
+    &::before {
+      box-shadow: none;
+    }
   }
 }

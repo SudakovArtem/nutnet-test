@@ -7,8 +7,42 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 46px;
+  padding-bottom: 49px;
+
+  @include viewport--sm {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.our-works__title {
+  @include viewport--sm {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.our-works__link {
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  transition: opacity $default-transition-settings;
+
+  span {
+    width: 8px;
+    height: 13px;
+    background: url("../img/bg/icons-sprite.png") -276px -10px;
+    margin-left: 10px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0) {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
 }
 
 .our-works__list {
@@ -41,4 +75,8 @@
 .our-works__footer {
   display: flex;
   justify-content: center;
+}
+
+.our-works__btn {
+  min-width: 140px;
 }

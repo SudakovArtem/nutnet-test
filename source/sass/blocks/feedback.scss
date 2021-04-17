@@ -1,0 +1,25 @@
+.feedback {
+  padding-top: 63px;
+  padding-bottom: 68px;
+}
+
+.feedback__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.feedback__form {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button[type="submit"] {
+    align-self: center;
+    min-width: 120px;
+  }
+}

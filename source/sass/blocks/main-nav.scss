@@ -1,0 +1,90 @@
+.main-nav {
+  padding-right: 9px;
+
+  @include viewport--lg {
+    padding-right: 0;
+  }
+}
+
+.main-nav__wrapper {
+  @include viewport--sm {
+    width: 100%;
+    position: fixed;
+    visibility: hidden;
+    margin-top: 0;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    min-height: calc(100 * var(--vh, 1vh));
+    background: $color-default-white;
+    transform: translateX(100%);
+    padding-top: 106px;
+    transition: opacity $default-transition-settings, transform $default-transition-settings, visibility $default-transition-settings;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include viewport--sm {
+    flex-direction: column;
+  }
+}
+
+.main-nav__item {
+  &:not(:last-of-type) {
+    margin-right: 23px;
+  }
+
+  @include viewport--sm {
+    &:not(:last-of-type) {
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+
+  @include viewport--sm {
+    display: flex;
+    position: fixed;
+    top: 27px;
+    right: 27px;
+    z-index: 3;
+  }
+}
+
+.main-nav__link {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: $color-default-white;
+  line-height: 1.2;
+  letter-spacing: 0.051em;
+  white-space: nowrap;
+  transition: opacity $default-transition-settings;
+
+  &--active {
+    color: $color-bright-turquoise;
+    pointer-events: none;
+  }
+
+  @include viewport--sm {
+    color: $color-grape;
+    font-size: 24px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0) {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+}

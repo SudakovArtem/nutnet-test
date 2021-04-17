@@ -57,21 +57,36 @@
   &__content {
     position: relative;
 
-    width: 600px;
-    padding: 40px;
+    width: 100%;
+    max-width: 960px;
 
     background-color: $color-default-white;
 
-    @include viewport--sm {
-      width: 100%;
-      padding: 20px;
-    }
   }
 
   &__close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    background-color: $color-bright-turquoise;
+
+    svg {
+      transition: opacity $default-transition-settings;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        svg {
+          opacity: 0.5;
+        }
+      }
+    }
   }
 
   &--responsive {
@@ -103,5 +118,36 @@
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
+  }
+
+  &--video {
+    .modal__content {
+      margin-left: 0;
+      max-width: 800px;
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .modal__iframe {
+      position: relative;
+      width: 100%;
+      height: 56vw;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      @media (min-width: 800px) {
+        height: 450px;
+      }
+    }
+
+    .modal__wrapper {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }

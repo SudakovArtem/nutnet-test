@@ -1,3 +1,119 @@
 .review {
   position: relative;
+  padding-top: 51px;
+  padding-bottom: 70px;
+}
+
+.review__block {
+  transition: opacity $default-transition-settings;
+}
+
+.review__text {
+  position: relative;
+  min-height: 184px;
+  font-size: 16px;
+  font-family: $font-family--secondary;
+  color: rgba($color-default-white, 0.851);
+  line-height: 1.625;
+  letter-spacing: 0.027em;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 44px;
+  padding-top: 81px;
+
+  &::before {
+    content: "“";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 100px;
+    font-family: $font-family--secondary;
+    color: rgba($color-default-white, 0.902);
+    line-height: 1;
+  }
+
+  @include viewport--sm {
+    min-height: 337px;
+  }
+}
+
+.review__list {
+  min-height: 70px;
+  margin-top: 40px;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review__item {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 45px;
+  height: 45px;
+  transition: width $default-transition-settings, height $default-transition-settings, opacity $default-transition-settings;
+
+  &:not(.review__item--active) {
+    cursor: pointer;
+
+    @media (hover: hover), screen and (min-width: 0) {
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 14px;
+  }
+
+  &--active {
+    width: 70px;
+    height: 70px;
+  }
+
+  @media (max-width: 374px) {
+    width: 40px;
+    height: 40px;
+
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+
+    &--active {
+      width: 65px;
+      height: 65px;
+    }
+  }
+}
+
+.review__name {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $color-default-white;
+  line-height: 1.571;
+  text-align: center;
+  letter-spacing: 0.051em;
+}
+
+.review__position {
+  font-size: 13px;
+  color: rgba($color-default-white, 0.702);
+  line-height: 1.692;
+  text-align: center;
 }

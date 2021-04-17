@@ -1,0 +1,31 @@
+section.feedback.container
+  h2.h2.feedback__title GIVE US A GOOD NEWS
+  .feedback__form
+    form(action="#")
+      +input-border({
+        placeholder: "Name",
+        name: "name",
+        type: "text",
+        required: true,
+        errorText: 'error message'
+      })
+      +input-border({
+        placeholder: "Email",
+        name: "email",
+        type: "email",
+        required: true,
+        errorText: 'error message'
+      })
+      +input-border({
+        placeholder: "Subject",
+        name: "subject",
+        type: "text",
+        required: true,
+        errorText: 'error message'
+      })
+      .input-wrapper.input-wrapper--textarea
+        label
+          textarea(name="reply__reply" placeholder="Your Message" required)
+          span.input-wrapper__error-text error message
+      +btn({type: "button", cssClass: "feedback__btn", content: "submit", btnType: "submit"})
+

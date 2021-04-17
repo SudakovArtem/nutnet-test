@@ -1,0 +1,97 @@
+.socials {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $viewport--md) and (max-width: 858px) {
+    max-width: 140px;
+    justify-content: space-between;
+
+    .socials__item {
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include viewport--sm {
+    justify-content: center;
+  }
+}
+
+.socials__item {
+  margin-bottom: 8px;
+
+  &:not(:last-of-type) {
+    margin-right: 8px;
+  }
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid $color-default-white;
+  transition: opacity $default-transition-settings;
+
+  @media (hover: hover), screen and (min-width: 0) {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+
+  &--facebook {
+    span {
+      width: 7px;
+      height: 15px;
+      background: url("../img/bg/icons-sprite.png") -199px -150px;
+    }
+  }
+
+  &--twitter {
+    span {
+      width: 14px;
+      height: 11px;
+      background: url("../img/bg/icons-sprite.png") -82px -220px;
+    }
+  }
+
+  &--dribble {
+    span {
+      width: 16px;
+      height: 16px;
+      background: url("../img/bg/icons-sprite.png") -128px -150px;
+    }
+  }
+
+  &--instagram {
+    span {
+      width: 15px;
+      height: 15px;
+      background: url("../img/bg/icons-sprite.png") -164px -150px;
+    }
+  }
+
+  &--google {
+    span {
+      width: 15px;
+      height: 14px;
+      background: url("../img/bg/icons-sprite.png") -10px -220px;
+    }
+  }
+
+  &--youtube {
+    span {
+      width: 17px;
+      height: 11px;
+      background: url("../img/bg/icons-sprite.png") -45px -220px;
+    }
+  }
+}

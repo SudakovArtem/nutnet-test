@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.97 101.56">
+    <g id="Layer_1">
+      <polyline class="cls-1" fill="#49a3cc" points="51.48 0 51.48 101.56 77.23 80.89 51.48 0"/>
+      <polyline class="cls-2" fill="#53c3bf" points="51.48 0 77.23 80.89 102.97 80.89"/>
+      <line class="cls-2" fill="#53c3bf" x1="102.97" y1="80.88" x2="51.49"/>
+      <polyline class="cls-3" fill="#30235e" points="51.48 0 51.48 101.56 25.74 80.89 51.48 0"/>
+      <polyline class="cls-4" fill="#12102e" points="51.48 0 25.74 80.89 0 80.89"/>
+      <line class="cls-4" fill="#12102e" y1="80.88" x2="51.49"/>
+    </g>
+</svg>

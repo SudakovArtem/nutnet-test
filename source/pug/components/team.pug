@@ -1,0 +1,12 @@
+section.team
+  +img("content", "team-background", "jpg", 1600, 712, "background").background
+  .team__container.container
+    h2.h2.h2--white.team__title MEET OUR AMAZING TEAM
+    p.team__text.bottom-line.bottom-line--white Lorem ipsum dolor sit amet proin gravida nibh vel velit
+    ul.team__list.row
+      each person in persons
+        li.team__item.col-md
+          +person({name: person.name, position: person.position, href: person.href})
+    .team__footer
+      p.team__footer-text Become part of our dream team, let’s join us !
+      +btn({type: "link", cssClass: "team__btn", content: "we are hiring"})

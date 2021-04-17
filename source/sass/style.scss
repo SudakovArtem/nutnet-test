@@ -3,7 +3,6 @@
 
 @import "vendor/normalize";
 @import "vendor/bootstrap-grid";
-// @import "vendor/swiper";
 
 // Global
 //---------------------------------
@@ -22,17 +21,28 @@
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/modal";
-@import "blocks/background";
 @import "blocks/intro";
 @import "blocks/our-story";
 @import "blocks/expertise";
 @import "blocks/team";
 @import "blocks/our-works";
 @import "blocks/review";
-@import "blocks/btn";
-@import "blocks/bottom-line";
-@import "blocks/expertise-item";
-@import "blocks/person";
+@import "blocks/main-nav";
+@import "blocks/feedback";
+
+// Components
+//---------------------------------
+
+@import "components/background";
+@import "components/btn";
+@import "components/bottom-line";
+@import "components/expertise-item";
+@import "components/person";
+@import "components/play-btn";
+@import "components/input-wrapper";
+@import "components/subscription-block";
+@import "components/socials";
+@import "components/burger";
 
 
 // используйте это для отключения ховеров на тач устройствах

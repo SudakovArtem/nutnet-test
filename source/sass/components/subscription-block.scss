@@ -1,0 +1,45 @@
+.subscription-block {
+  form {
+    display: flex;
+    width: 100%;
+    padding-top: 3px;
+    padding-right: 8px;
+
+    @include viewport--lg {
+      padding-right: 0;
+    }
+  }
+
+  button[type="submit"] {
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    outline: none;
+    flex-shrink: 0;
+    width: 71px;
+    height: 45.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color-default-white, 0.5);
+    margin-left: 10px;
+    transition: background-color $default-transition-settings;
+
+    @include viewport--sm {
+      height: 53.8px;
+    }
+
+    @media (hover: hover), screen and (min-width: 0) {
+      &:hover,
+      &:focus {
+        background-color: $color-default-white;
+      }
+    }
+
+    span {
+      width: 25px;
+      height: 25px;
+      background: url("../img/bg/icons-sprite.png") -228px -80px;
+    }
+  }
+}

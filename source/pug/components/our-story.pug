@@ -1,0 +1,16 @@
+section.our-story
+  .our-story__wrap.container
+    .row
+      .our-story__aside.col-md-5
+        img(src="img/svg/figure.svg" width="232" height="232" alt="figure")
+      .our-story__content.col-md-7
+        h2.h2.our-story__title our story
+        p.our-story__text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus
+        p.our-story__text Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        +btn({type: "link", cssClass: "our-story__btn", content: "learn more"})
+  .our-story__video
+    +img("content", "our-story-background", "jpg", 1600, 549, "background").background
+    .our-story__video-wrap.container
+      button(data-modal="video").our-story__play-btn.play-btn
+        span
+      p watch our story

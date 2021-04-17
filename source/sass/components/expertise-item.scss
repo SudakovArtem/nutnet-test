@@ -1,0 +1,99 @@
+.expertise-item {
+  padding: 0 20px 37px;
+  border-bottom: 1px solid rgba($color-default-black, 0.08);
+
+  &--web {
+    .expertise-item__icon span {
+      width: 49px;
+      height: 50px;
+      background: url("../img/bg/icons-sprite.png") -80px -80px;
+    }
+  }
+
+  &--branding {
+    .expertise-item__icon span {
+      width: 50px;
+      height: 42px;
+      background: url("../img/bg/icons-sprite.png") -158px -76px;
+    }
+  }
+
+  &--mobile {
+    .expertise-item__icon span {
+      width: 28px;
+      height: 50px;
+      background: url("../img/bg/icons-sprite.png") -228px -10px;
+    }
+  }
+
+  &--search {
+    .expertise-item__icon span {
+      width: 50px;
+      height: 50px;
+      background: url("../img/bg/icons-sprite.png") -10px -80px;
+    }
+  }
+
+  &--game {
+    .expertise-item__icon span {
+      width: 41px;
+      height: 50px;
+      background: url("../img/bg/icons-sprite.png") -10px -150px;
+    }
+  }
+
+  &--love {
+    .expertise-item__icon span {
+      width: 50px;
+      height: 46px;
+      background: url("../img/bg/icons-sprite.png") -158px -10px;
+    }
+  }
+
+  @media (min-width: $viewport--md) {
+    border-right: 1px solid rgba($color-default-black, 0.08);
+
+    &:nth-of-type(n+4) {
+      padding-top: 6px;
+      border-bottom: none;
+    }
+
+    &:nth-of-type(3n) {
+      border-right: none;
+    }
+  }
+
+  @include viewport--sm {
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.expertise-item__icon {
+  height: 115px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expertise-item__name {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  color: $color-night-rider;
+  margin-top: 0;
+  margin-bottom: 17px;
+  letter-spacing: 0.051em;
+}
+
+.expertise-item__description {
+  font-size: 14px;
+  color: $color-grape;
+  line-height: 1.571;
+  text-align: center;
+  letter-spacing: 0.051em;
+  margin: 0;
+}

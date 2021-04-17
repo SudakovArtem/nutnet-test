@@ -1,11 +1,11 @@
 mixin btn(settings)
   if (settings.type === "link")
-    a(class= (settings.mod) ? 'btn btn--' + settings.mod : 'btn', href= settings.href)
+    a(class= (settings.cssClass) ? 'btn btn--' + settings.cssClass : 'btn', href= settings.href)
       span= settings.content
   if (settings.type === "button")
     if (settings.disabled)
-      button(class= (settings.mod) ? 'btn btn--' + settings.mod : 'btn', type=settings.btnType, disabled)
+      button(class= (settings.cssClass) ? 'btn ' + settings.cssClass : 'btn', type=settings.btnType, disabled)
         span= settings.content
     else
-      button(class= (settings.mod) ? 'btn btn--' + settings.mod : 'btn', type=settings.btnType)
+      button(class= (settings.cssClass) ? 'btn ' + settings.cssClass : 'btn', type=settings.btnType)
         span= settings.content

@@ -1,0 +1,10 @@
+mixin input-border(settings)
+  div(class= (settings.cssClass) ? "input-wrapper js-input " + settings.cssClass : "input-wrapper js-input")
+    label
+      if (settings.required)
+        input(type=settings.type, name= settings.name, placeholder= settings.placeholder, required)&attributes(attributes)
+        span.input-wrapper__error-text= settings.errorText
+      else
+        input(type=settings.type, name= settings.name, placeholder= settings.placeholder)
+
+

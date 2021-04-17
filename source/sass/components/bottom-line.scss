@@ -1,0 +1,29 @@
+.bottom-line {
+  position: relative;
+  padding-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $color-grape;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+  }
+
+  &--blue {
+    padding-bottom: 22px;
+
+    &::before {
+      background-color: $color-bright-turquoise;
+    }
+  }
+
+  &--white {
+    &::before {
+      background-color: $color-default-white;
+    }
+  }
+}

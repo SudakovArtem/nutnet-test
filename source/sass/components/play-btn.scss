@@ -1,0 +1,28 @@
+.play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  background: $color-transparent;
+  outline: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid $color-default-white;
+  transition: opacity $default-transition-settings;
+
+  span {
+    width: 37px;
+    height: 45px;
+    background: url("../img/bg/icons-sprite.png") -71px -150px;
+    margin-left: 6px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0) {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+}

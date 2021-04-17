@@ -1,0 +1,55 @@
+.person {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (hover: hover), screen and (min-width: 0) {
+    &:hover,
+    &:focus {
+      .person__wrap {
+        border-color: $color-transparent;
+      }
+      .person__name,
+      .person__position {
+        color: $color-bright-turquoise;
+      }
+    }
+  }
+}
+
+.person__wrap {
+  border: 1px solid rgba($color-default-white, 0.502);
+  padding-top: 16px;
+  padding-bottom: 25px;
+  transition: border-color $default-transition-settings;
+}
+
+.person__photo {
+  width: 100%;
+  height: 230px;
+  background-color: $color-default-white;
+}
+
+.person__name {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $color-default-white;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.051em;
+  margin-top: 0;
+  margin-bottom: 5px;
+  transition: color $default-transition-settings;
+}
+
+.person__position {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: $color-snow2;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+  transition: color $default-transition-settings;
+}

@@ -1,0 +1,10 @@
+section.expertise.container
+  h2.h2.expertise__title expertise
+  p.expertise__text.bottom-line Lorem ipsum dolor sit amet proin gravida nibh vel velit
+  ul.expertise__list.row
+    each item in expertiseItems
+      li(class= item.mod ? `expertise-item expertise-item--${item.mod}` : 'expertise-item').expertise__item.col-md-4
+        .expertise-item__icon
+          span
+        h3.expertise-item__name= item.title
+        p.expertise-item__description= item.description
