@@ -20,7 +20,7 @@ const initModals = () => {
   });
 
   if (modalVideo && modalVideoBtns.length) {
-    setupModal(modalVideo, false, modalVideoBtns, false, false, true);
+    setupModal(modalVideo, false, modalVideoBtns);
   }
 };
 
