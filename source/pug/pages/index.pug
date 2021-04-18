@@ -1,73 +1,28 @@
 extends ../base/layout
 
+block data
+  include ../data/main-page-data
+
+
 block variables
-  - var title = "Оглавление"
+  - var title = "Tajam — Home"
+  - var wrapperMod = ""
+  - var hasHeader = true
+  - var headerMod = ""
+  - var hasFooter = true
+  - var footerMod = ""
+  - var currentPage = "main"
 
 block main
-  style.
-    .container {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
+  main
+    include ../components/intro
+    include ../components/our-story
+    include ../components/expertise
+    include ../components/team
+    include ../components/our-works
+    include ../components/review
+    include ../components/feedback
 
-    h1 {
-      font-size: 24px;
-      line-height: 28px;
-    }
-
-    a {
-      color: rgb(10, 10, 175);
-    }
-
-    li {
-      font-size: 18px;
-      line-height: 22px;
-      margin-bottom: 7px;
-    }
-
-    img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      display: block;
-      margin-bottom: 40px;
-    }
-
-    @media (max-width: 768px) {
-      ol {
-        padding-left: 20px;
-      }
-
-      ol li {
-        margin-bottom: 15px;
-      }
-
-      .container {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-    }
-
-  -
-    var pages = [
-      {
-        name: "UI Kit — components.html",
-        src: "components.html"
-      },
-      {
-        name: "Главная — main.html",
-        src: "main.html"
-      },
-      {
-        name: "Название страницы (состояние страницы, если отдельное) — ссылка на страницу",
-        src: "#"
-      },
-    ]
-
-  main.container.main-index
-    img(src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта")
-    h1 Список страниц и компонентов
-    ol
-      each page in pages
-        li
-          a(href= page.src)= page.name
+block modals
+  +modal("modal--video modal--no-scale modal--no-overlay", false, true)
+    +modal-video()

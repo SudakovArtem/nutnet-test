@@ -16,6 +16,6 @@ iosVhFix();
 // ---------------------------------
 
 initModals();
-initReviews();
 initHeader();
+initReviews();
 initFormValidation();

@@ -5532,10 +5532,3 @@ button,
     width: 100%; }
   .burger span:nth-of-type(3) {
     width: 75%; }
-
-/* @media (hover: hover), screen and (min-width: 0\0) {
-  &:hover,
-  &:focus {
-    color: red;
-  }
-} */
