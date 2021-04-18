@@ -61,7 +61,6 @@
     max-width: 960px;
 
     background-color: $color-default-white;
-
   }
 
   &__close-btn {
@@ -74,6 +73,7 @@
     top: 0;
     right: 0;
     background-color: $color-bright-turquoise;
+    outline: none;
 
     svg {
       transition: opacity $default-transition-settings;
@@ -127,6 +127,10 @@
       display: flex;
       justify-content: center;
       margin-top: 32px;
+
+      @include viewport--sm {
+        margin-top: 0;
+      }
     }
 
     .modal__iframe {
@@ -148,6 +152,8 @@
     .modal__wrapper {
       padding-left: 0;
       padding-right: 0;
+      padding-top: 0;
+      align-items: flex-start;
     }
   }
 }

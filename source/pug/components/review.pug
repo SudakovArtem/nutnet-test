@@ -8,5 +8,6 @@ section.review
       span.review__position CEO TENGKUREP
     ul.review__list
       each author in authors
-        li(class= author.mod ? `review__item review__item--${author.mod}` : 'review__item' data-text=author.text data-name=author.name data-position=author.position)
-          +img("content", author.photo, "jpg", 45, 45, "author")
+        li.review__item
+          button(type="button" class= author.mod ? `review__card review__card--${author.mod}` : 'review__card' data-text=author.text data-name=author.name data-position=author.position)
+            +img("content", author.photo, "jpg", 45, 45, "author")

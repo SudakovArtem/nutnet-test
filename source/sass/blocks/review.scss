@@ -50,15 +50,33 @@
 }
 
 .review__item {
-  position: relative;
   flex-shrink: 0;
+
+  &:not(:last-of-type) {
+    margin-right: 14px;
+  }
+
+  @media (max-width: 374px) {
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.review__card {
+  padding: 0;
+  background: $color-transparent;
+  border: none;
+  outline: none;
+  position: relative;
+  display: block;
   border-radius: 50%;
   overflow: hidden;
   width: 45px;
   height: 45px;
   transition: width $default-transition-settings, height $default-transition-settings, opacity $default-transition-settings;
 
-  &:not(.review__item--active) {
+  &:not(.review__card--active) {
     cursor: pointer;
 
     @media (hover: hover), screen and (min-width: 0) {
@@ -78,10 +96,6 @@
     object-fit: cover;
   }
 
-  &:not(:last-of-type) {
-    margin-right: 14px;
-  }
-
   &--active {
     width: 70px;
     height: 70px;
@@ -90,10 +104,6 @@
   @media (max-width: 374px) {
     width: 40px;
     height: 40px;
-
-    &:not(:last-of-type) {
-      margin-right: 10px;
-    }
 
     &--active {
       width: 65px;
