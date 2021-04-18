@@ -101,6 +101,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       border: 2px solid rgba($color-default-white, 0.5);
+      color: $color-default-white;
 
       @media (hover: hover), screen and (min-width: 0) {
         &:hover,

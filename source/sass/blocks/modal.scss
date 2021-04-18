@@ -152,8 +152,11 @@
     .modal__wrapper {
       padding-left: 0;
       padding-right: 0;
-      padding-top: 0;
-      align-items: flex-start;
+
+      @include viewport--sm {
+        padding-top: 0;
+        align-items: flex-start;
+      }
     }
   }
 }

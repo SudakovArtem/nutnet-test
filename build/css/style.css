@@ -4521,11 +4521,13 @@ button,
         height: 450px; } }
   .modal--video .modal__wrapper {
     padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
+    padding-right: 0; }
+    @media (max-width: 767px) {
+      .modal--video .modal__wrapper {
+        padding-top: 0;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; } }
 
 .intro {
   position: relative;
@@ -4856,7 +4858,7 @@ button,
     line-height: 1; }
   @media (max-width: 767px) {
     .review__text {
-      min-height: 337px; } }
+      min-height: 345px; } }
 
 .review__list {
   min-height: 70px;
@@ -5100,10 +5102,11 @@ button,
     z-index: 0; }
   .btn span {
     z-index: 1; }
-  @media (hover: hover), screen and (min-width: 0) {
-    .btn:hover::before, .btn:focus::before {
-      -webkit-transform: scale(1.1, 1.1);
-              transform: scale(1.1, 1.1); } }
+
+@media (min-width: 768px) and (hover: hover), screen and (min-width: 768px) and (min-width: 0) {
+  .btn:hover::before, .btn:focus::before {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1); } }
   .btn:disabled {
     pointer-events: none; }
   @media (max-width: 767px) {
@@ -5358,7 +5361,8 @@ button,
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      border: 2px solid rgba(255, 255, 255, 0.5); }
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      color: #ffffff; }
       @media (hover: hover), screen and (min-width: 0) {
         .input-wrapper--subscribe input:hover, .input-wrapper--subscribe input:focus {
           border-color: #ffffff; } }
