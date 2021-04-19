@@ -35,6 +35,7 @@
 .person__name {
   text-transform: uppercase;
   font-size: 14px;
+  font-weight: 900;
   color: $color-default-white;
   line-height: 1.2;
   text-align: center;
@@ -47,7 +48,8 @@
 .person__position {
   text-transform: uppercase;
   font-size: 13px;
-  color: $color-snow2;
+  font-weight: 300;
+  color: rgba($color-snow2, 0.7);
   line-height: 1.2;
   text-align: center;
   margin: 0;

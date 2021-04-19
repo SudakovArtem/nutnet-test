@@ -4280,13 +4280,16 @@ button,
 
 .footer__text {
   font-size: 14px;
+  font-weight: 300;
   line-height: 1.857;
-  letter-spacing: 0.016em; }
+  letter-spacing: 0.025em; }
 
 .footer__title {
   text-transform: uppercase;
   font-size: 15px;
+  font-weight: 900;
   line-height: 1.733;
+  letter-spacing: 0.04em;
   margin-top: 0;
   margin-bottom: 27px; }
   @media (max-width: 767px) {
@@ -4306,8 +4309,9 @@ button,
   position: relative;
   display: block;
   font-size: 14px;
+  font-weight: 300;
   line-height: 1.857;
-  letter-spacing: 0.016em;
+  letter-spacing: 0.025em;
   padding-left: 25px;
   color: #ffffff;
   -webkit-transition: opacity 0.3s ease;
@@ -4640,6 +4644,7 @@ button,
           flex-grow: 1; }
   .our-story__video-wrap p {
     font-size: 16px;
+    font-weight: 900;
     line-height: 1.2;
     color: #ffffff;
     text-align: center;
@@ -4736,6 +4741,7 @@ button,
 
 .team__footer-text {
   font-size: 14px;
+  font-weight: 300;
   color: #f3f3f3;
   line-height: 1.2;
   text-align: center;
@@ -4784,6 +4790,10 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #413d4b;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
   letter-spacing: -0.02em;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
@@ -4925,6 +4935,7 @@ button,
 .review__name {
   text-transform: uppercase;
   font-size: 14px;
+  font-weight: 900;
   color: #ffffff;
   line-height: 1.571;
   text-align: center;
@@ -4932,6 +4943,7 @@ button,
 
 .review__position {
   font-size: 13px;
+  font-weight: 300;
   color: rgba(255, 255, 255, 0.702);
   line-height: 1.692;
   text-align: center; }
@@ -5008,7 +5020,8 @@ button,
   font-size: 13px;
   color: #ffffff;
   line-height: 1.2;
-  letter-spacing: 0.051em;
+  font-weight: 900;
+  letter-spacing: 0.039em;
   white-space: nowrap;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
@@ -5189,18 +5202,20 @@ button,
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.2;
+  font-weight: 900;
   text-align: center;
   color: #333333;
   margin-top: 0;
   margin-bottom: 17px;
-  letter-spacing: 0.051em; }
+  letter-spacing: 0.05em; }
 
 .expertise-item__description {
   font-size: 14px;
+  font-weight: 300;
   color: #413d4b;
   line-height: 1.571;
   text-align: center;
-  letter-spacing: 0.051em;
+  letter-spacing: 0.058em;
   margin: 0; }
 
 .person {
@@ -5232,6 +5247,7 @@ button,
 .person__name {
   text-transform: uppercase;
   font-size: 14px;
+  font-weight: 900;
   color: #ffffff;
   line-height: 1.2;
   text-align: center;
@@ -5244,7 +5260,8 @@ button,
 .person__position {
   text-transform: uppercase;
   font-size: 13px;
-  color: #fafafa;
+  font-weight: 300;
+  color: rgba(250, 250, 250, 0.7);
   line-height: 1.2;
   text-align: center;
   margin: 0;
